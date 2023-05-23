@@ -1,18 +1,19 @@
-import React, { useState } from 'react';
-import {Card} from 'react-bootstrap';
-import Rating from 'react-stars';
-
+import React from 'react'
+import { Button, Card } from 'react-bootstrap'
+import { Link } from 'react-router-dom'
 
 function MovieCard({movie}) {
-   
   return (
-    <div className="Card">
-        <Card>
-      <Card.Img className="Image" variant="top" src={movie.posterURL} />
+    <div>
+    <Card style={{ width: '18rem' }}>
+      <Card.Img variant="top" src={movie.posterImage} />
       <Card.Body>
-        <Card.Title className="Title">{movie.title}</Card.Title>
-        <Card.Text>{movie.description} </Card.Text>
-        <Rating name="read-only" value={movie.rating} readOnly />
+        <Card.Title>{movie.title}</Card.Title>
+        <Card.Text>{movie.description}</Card.Text>
+        {/* Go to movie (title, description)  and trailer page */}
+        <Link to={`/trailer/${movie.id}`}>
+        <Button variant="primary">See Movie</Button>
+        </Link>
       </Card.Body>
     </Card>
     </div>

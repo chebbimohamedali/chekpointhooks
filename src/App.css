@@ -2,20 +2,9 @@
   text-align: center;
 }
 
-.Movie{
+.list{
   display:flex;
   justify-content: space-between;
+  padding: 20px;
 
-}
-
-.Title{
-  color: #1e1e4e;
-}
-.Image{
-  width: 300px;
-  height: 250px;
-}
-.Card{
-  padding-top: 20px;
-  width: '18rem';
 }

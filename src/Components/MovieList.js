@@ -1,15 +1,15 @@
-import React from 'react'
-import Card from "./MovieCard";
+import React from 'react';
+import {movies} from "../Data/DbMovies";
+import MovieCard from './MovieCard';
+import "../App.css";
 
 
-function MovieList({movies}) {
- 
+function MovieList () {
   return (
-    <div className="Movie">
-        {movies.map((movie)=>
-        <Card movie={movie}/>
-        )
-        }
+    <div  className="list">
+      {
+        movies.map((movie)=> (<MovieCard movie={movie} key={movie.id}/>))
+      }
     </div>
   )
 }
